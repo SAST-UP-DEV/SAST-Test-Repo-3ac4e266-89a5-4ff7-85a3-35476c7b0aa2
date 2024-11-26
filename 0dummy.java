@@ -68,6 +68,7 @@ public class SqlInjectionLesson10 extends AssignmentEndpoint {
             int cols = results.getMetaData().getColumnCount();
             return (cols > 0);
         } catch (SQLException e) {
+            
             String errorMsg = e.getMessage();
             if (!errorMsg.contains("object not found: ACCESS_LOG")) {
                 System.err.println(e.getMessage());
